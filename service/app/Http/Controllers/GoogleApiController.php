@@ -9,6 +9,7 @@ use Google_Client;
 use Google_Service_Drive;
 use Illuminate\Support\Facades\Storage;
 use League\Csv\Reader;
+use Google_Service_Sheets;
 
 class GoogleApiController extends Controller
 {
@@ -41,7 +42,11 @@ class GoogleApiController extends Controller
         $jsonData = json_encode($newarray);
 
         Storage::disk('local')->put('dataFromGoogle' . time() . '.json', json_encode($jsonData));
-       return $jsonData;
+
+        $range = "myapi!A1:A2";
+
+
+        return $jsonData;
 
     }
 
@@ -51,4 +56,32 @@ class GoogleApiController extends Controller
 //        return Response::download(public_path('/upload/jsonfile/'.$fileName));
 
 //    }
+
+    public function update() {
+        $client = new Google_Client();
+        putenv('GOOGLE_APPLICATION_CREDENTIALS=googleserviceworker.json');
+        $client->useApplicationDefaultCredentials();
+        $client->addScope(Google_Service_Drive::DRIVE);
+        $service = new Google_Service_Sheets($client);
+
+        $fileID = '1t8Zca1g87UciGYhUMTBIof3mJxbnEmlYnyP43MO-wkg';
+
+        $range = "A2:B2";
+        $values = [
+            ["ahmed", "Alghamdi"]
+        ];
+        $body = new \Google_Service_Sheets_ValueRange([
+            'values'=> $values
+        ]);
+        $params = [
+            'valueInputOption' => 'RAW'
+        ];
+        $result = $service->spreadsheets_values->update(
+            $fileID,
+            $range,
+            $body,
+            $params
+        );
+       return 'Updated .. !';
+    }
 }

@@ -18,4 +18,6 @@ use Illuminate\Http\Request;
 //});
 
 Route::get('/googlesheet', 'GoogleApiController@index');
+Route::get('/googlesheet/update', 'GoogleApiController@update');
+
 
