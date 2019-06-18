@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "progress-management",
+  "private_key_id": "4aeb1a44b524dc53b44f2a37c8260c35c721663a",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQC0hW2om7AwWEPu\nu8RjEdqbzclWdgKf05aIkNC+hBE6/5la1XdMk0sap6xEJiBu7iQ5Q1PNuysQgKXu\n/oai+r9CUA5Nhb+1hoMPP0auS4tatDBvTKpGNH09KQkYg0A7pZgQWRtsoxl1WMes\nudi/w5oqctszNDH0PN8U/PmJh4ILriV+B4RvDxxeFlOuSmecGclChO4OI9/GY17q\nFogGec0sZDV0F/w/V4FqWpsBME7ypK6w5uXaorjXQlFqqPDWuHy8gSEo9pA/WiyM\nP+ap0zm2QBAgGn50zNsyLYg/sv+YkoRligsn/yzQuS09LLYzJK0zgcV8k9rfvJ4F\no85yLRThAgMBAAECggEAJPek/PAC/Od6Y99qSGJt2tWhuzW39FxrWYSUZstbTvJs\nSGxp/ZG1Qdxf2+XV4vmcC+j0dq8zUrIRqPdRAXupYo5L24a9+1G0MZFi60r3mufG\n+mff/7f8hKOMZAtuwjg3Q3PH+K+OxVfcrgux7hVDkxlJt7ri1vIHOgBTJp2MHVFg\nemAV/nph1VffRCOuUjJVtV33eZy0snY5U70yTJyAqSsZDZYilo8sBJdB6CupvqCE\nFcHNUbpzkWkgADLMOwkvCrR4ZX+mTlKsh3uFUli76Iz8OTsiJm7XGRhjbX9h6vVA\nzRDb9RcHEjSjzX/1hvMyRHYkTt+krNZNwnEqvl4C5QKBgQDYTioUv5OQkL2y30kG\nz9d7plWGdfID/WrqmGG4V7CJ4roBne9R1ldtV/Vabj/aztQMFIckxCx/bHPBh+J3\n2zHW9sWjHPhsRF2Nay009e2/IBGrapIuLDZk6epsSKLvZ4ZkZ1TpsvucqKMGi2zs\n1hspY81fKMkJdsGx4Zl9dFZRVQKBgQDVpigxhhej0p3TP09ixkQ41WlS71IkSSL1\nFdMopHTD5HtOqq2/iWYeSn/LiUpw+js9scYEsFHj8e4ZcYCqGBjbAM1vaEzd1m4Y\nshDBy4KW6Ypt9NIyqK2NOdPTWo51zoz3a1ZEp/Vm04cvL04SIGOPCyEvCJXhHShd\n2yp36c9lXQKBgCLTswLUNbY5F9INEXz/SfqmtW6I3wa1btmG33UG6W3KC5jnDPlo\nQXthhiehSLa6RnoLdBb/XwrFM34dmuEhcczivr+ckoMcHtP+RbEZR8ZWK4ImDpNQ\nmxF0eEInD9TsHj9cQ9e88bYvkNAk8szPTGBFqXOA5Z2YeWdio4wHhz5hAoGAG6DY\nE8duaS4EYNwQDQrsqZjXfPUb3zth/OWsn9Xcj7SNSZgCzgEbppElw5FmggOqA4lo\nvRR8EoknrDykUdq55CBPcLfBMPLY2/Ky/gyuP4vF7gA56nkrsFapEOzl/VAPpLNJ\nvakmr/xsv+pTIz7zAP2EdgubLjhSDwkXjdg7jLUCgYAhG9dauCT+av/bZbfaV8QF\nX3VrPNl671nOJvQCFBFa6n98D/k25ZMEO4Blw7Xba93x7UZHqMf4lfQ+QEp5aQZZ\nTk2zsAHbQO1OoY9QHLBWPK0b6tTxtivUNQvuAU/FYfcetuzZT2hqdHJx6BjMduNh\no0x6O1TdHZyS9yyXmEXc0w==\n-----END PRIVATE KEY-----\n",
+  "client_email": "myapi-826@progress-management.iam.gserviceaccount.com",
+  "client_id": "113630221121914677318",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/myapi-826%40progress-management.iam.gserviceaccount.com"
+}
