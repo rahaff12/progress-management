@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Carbon\Carbon;
 use Faker\Provider\File;
 use Illuminate\Http\Request;
 use Google_Client;
@@ -39,10 +40,8 @@ class GoogleApiController extends Controller
         }
         $jsonData = json_encode($newarray);
 
-        Storage::disk('local')->put('dataFromGoogle'.time().'.json', json_encode($jsonData));
-        print_r($jsonData);
-
-
+        Storage::disk('local')->put('dataFromGoogle' . time() . '.json', json_encode($jsonData));
+       return $jsonData;
 
     }
 

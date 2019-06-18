@@ -11,5 +11,4 @@
 |
 */
 
-Route::get('/', 'GoogleApiController@index');
 
