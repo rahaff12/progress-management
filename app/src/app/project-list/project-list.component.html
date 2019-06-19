@@ -1,0 +1,19 @@
+<div class="pt-5 pb-5">
+
+    <div class="columns" *ngFor="let i of range(dividedList.length)">
+
+        <div class="column is-one-fifth" *ngFor="let j of range( dividedList[i].length ) ">
+          <app-project [project] = "dividedList[i][j]" *ngIf="dividedList[i][j] !== undefined"></app-project>
+        </div>
+      
+    </div>
+
+    <div>
+      <a routerLink="project/new" class="button is-link">New Project</a>
+    </div>
+
+</div>
+
+
+
+

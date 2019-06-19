@@ -1,0 +1,37 @@
+<div class="pt-5">
+    <div class="container">
+        <form>
+  
+            <div class="field">
+              <label class="label">Project Name</label>
+              <div class="control">
+                <input [(ngModel)]="project.name" name= "project.name" class="input" type="text" placeholder="project name..." required>
+              </div>
+            </div>
+            
+            <div class="field">
+                <label class="label">Project Type</label>
+                <div class="control">
+                  <input [(ngModel)]="project.type" name= "project.type" class="input" type="text" placeholder="project type..." required>
+                </div>
+              </div>
+            
+            <div class="field">
+              <label class="label">Description</label>
+              <div class="control">
+                <textarea [(ngModel)]="project.desc" name="project.desc" class="textarea" placeholder="Project description..." required></textarea>
+              </div>
+            </div>
+            
+            <div class="field is-grouped">
+              <div class="control">
+                <button class="button is-link" (click)="onSubmit()">Create</button>
+              </div>
+              <div class="control">
+                  <a routerLink="" class="button">Back</a>
+              </div>
+            </div>
+            
+          </form>
+    </div>
+  </div>

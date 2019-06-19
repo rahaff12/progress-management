@@ -1,0 +1,17 @@
+<div class="card">
+    <header class="card-header costom-card-header">
+        <p class="card-header-title costom-card-title">
+            {{project.name}}
+        </p>
+      </header>
+    <div class="card-content">
+      <div class="content">
+        <p>{{project.desc}}</p>
+      </div>
+    </div>
+    <footer class="card-footer">
+      <a routerLink="#" class="card-footer-item">&#10068;</a>
+      <a [routerLink]="['project/', project.name ,'edit']" class="card-footer-item">&#9999;</a>
+      <a routerLink="" class="card-footer-item">&#10006;</a>
+    </footer>
+  </div>
