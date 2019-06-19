@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Project;
 use Carbon\Carbon;
 use Faker\Provider\File;
 use Illuminate\Http\Request;
@@ -39,16 +40,45 @@ class GoogleApiController extends Controller
         foreach ($records as $value) {
             $newarray[] = $value;
         }
+        $this->store($newarray);
+
         $jsonData = json_encode($newarray);
 
-        Storage::disk('local')->put('dataFromGoogle' . time() . '.json', json_encode($jsonData));
-
-        $range = "myapi!A1:A2";
+        //Storage::disk('local')->put('dataFromGoogle' . time() . '.json', json_encode($jsonData));
 
 
         return $jsonData;
 
     }
+
+    public function store($projects)
+    {
+        Project::truncate();
+        foreach ($projects as $p) {
+            $project = new Project();
+            $project->name = $p['name'];
+            $project->type = $p['type'];
+            $project->desc = $p['desc'];
+            $project->score = $p['score'];
+            $project->save();
+        }
+    }
+
+    public function storeang($projects)
+    {
+        Project::truncate();
+        foreach ($projects as $p) {
+            $project = new Project();
+            $project->name = $p['name'];
+            $project->type = $p['type'];
+            $project->desc = $p['desc'];
+            $project->score = $p['score'];
+            $project->save();
+        }
+    }
+
+
+
 
 //    public function downloadJSONFile($jsonData){
 //        $fileName = time() . '_datafile.json';
@@ -57,7 +87,8 @@ class GoogleApiController extends Controller
 
 //    }
 
-    public function update() {
+    public function update()
+    {
         $client = new Google_Client();
         putenv('GOOGLE_APPLICATION_CREDENTIALS=googleserviceworker.json');
         $client->useApplicationDefaultCredentials();
@@ -71,7 +102,7 @@ class GoogleApiController extends Controller
             ["ahmed", "Alghamdi"]
         ];
         $body = new \Google_Service_Sheets_ValueRange([
-            'values'=> $values
+            'values' => $values
         ]);
         $params = [
             'valueInputOption' => 'RAW'
@@ -82,6 +113,8 @@ class GoogleApiController extends Controller
             $body,
             $params
         );
-       return 'Updated .. !';
+        return 'Updated .. !';
     }
+
+
 }

@@ -19,5 +19,8 @@ use Illuminate\Http\Request;
 
 Route::get('/googlesheet', 'GoogleApiController@index');
 Route::get('/googlesheet/update', 'GoogleApiController@update');
+Route::get('/googlesheet/dbupdate', 'ProjectController@update');
+Route::post('/googlesheet/create', 'GoogleApiController@store123');
+
 
 
